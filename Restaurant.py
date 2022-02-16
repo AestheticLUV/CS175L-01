@@ -1,6 +1,6 @@
 #CS-175L-01
 #Jarek Torres
-#Restaurant
+#Restaurant V2
 
 #List of restaurants 
 #Joe's Gourmet Burgers - Vegetarian: No , Vegan: No , Gluten-Free: No
@@ -10,6 +10,8 @@
 #The Chef's Kitchen - Vegatarian: Yes , Vegan: Yes , Gluten-Free: Yes
 
 #ask wheather any members of your party are Vegetarian,Vegan, or Gluten-Free
+
+
 
 
 vegetarian = input("Is anyone in your party a vegetarian? ")
@@ -50,3 +52,46 @@ if vegan == False:
 
 print("Corner Cafe")
 print("The Chef's Kitchen ")
+
+search_question = input("Would you like to do another search yes/no? ")
+while search_question == "yes":                 #while loop
+    vegetarian = input("Is anyone in your party a vegetarian? ")
+    if vegetarian == "yes":
+        vegetarian = True
+    elif vegetarian == "no":
+         vegetarian = False
+    vegan = input("Is anyone in your party a vegan? ")
+    if vegan == "yes":
+        vegan = True
+    elif vegan == "no":
+        vegan = False 
+    gluten_free = input("Is anyone in your party gluten-free? ")
+    if gluten_free == "yes":
+        gluten_free = True
+    elif gluten_free == "no":
+     gluten_free = False 
+    print("Here are your restaurant choices:")
+    if vegetarian == False:
+        if vegan == False:
+            if gluten_free == False:
+                print("Joe's Gourmet Burgers") 
+
+
+    if vegan == False:
+        if gluten_free == False:
+            print("Mama's Fine Italian")
+
+    if vegan == False:
+        print("Main Street Pizza Company")
+    print("Corner Cafe")
+    print("The Chef's Kitchen ")
+
+
+    search_question = input("Would you like to do another search yes/no? ")
+     
+if search_question == "no":
+    print("Goodbye Enjoy your meal!")
+
+
+
+    
